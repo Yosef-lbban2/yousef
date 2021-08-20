@@ -10,7 +10,7 @@ chmod +x ts
 get() {
 rm -fr yousef.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/Yosef-lbban/yousef/master/yousef.lua"
+wget "https://raw.githubusercontent.com/Yosef-lbban2/yousef/master/yousef.lua"
 lua start.lua
 }
 installall(){

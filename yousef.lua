@@ -21,12 +21,6 @@ print("\27[34m"..[[
 >> Best Source in Telegram
 >> Features fast and powerful
 
-╔═╦╗──────╔═╗───╔═╗  ╔╗─────╔╗─╔╗─────────
-╚╗║║╔═╗╔╦╗║═╣╔═╗║═╣  ║║─╔═╗─║╚╗║╚╗╔═╗─╔═╦╗
-╔╩╗║║╬║║║║╠═║║╩╣║╔╝  ║╚╗║╬╚╗║╬║║╬║║╬╚╗║║║║
-╚══╝╚═╝╚═╝╚═╝╚═╝╚╝─  ╚═╝╚══╝╚═╝╚═╝╚══╝╚╩═╝
-───────────────────  ─────────────────────
-
 Installation information
 
 User :: ]]..User..[[
@@ -8145,8 +8139,8 @@ if text == ("تحديث السورس") and Devyousef(msg) then
 send(msg.chat_id_,msg.id_,'• تم التحديث')
 os.execute('rm -rf yousef.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/Yosef-lbban/yousef/master/yousef.lua')
-os.execute('wget https://raw.githubusercontent.com/Yosef-lbban/yousef/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/Yosef-lbban2/yousef/master/yousef.lua')
+os.execute('wget https://raw.githubusercontent.com/Yosef-lbban2/yousef/master/start.lua')
 dofile('yousef.lua')  
 return false
 end
@@ -8579,7 +8573,7 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
 
 Text = [[
-[⌔︙ Developer .](http://t.me/Yousef_Labban)
+السورس الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 end
@@ -8593,7 +8587,7 @@ send(msg.chat_id_, msg.id_,'• عذࢪا عليڪ الاشتࢪاڪ في قنا
 end
 return false
 end
-Text = [[• ︙  @LC6BOT   ]]
+Text = [[• ︙  @Yousef_Labban   ]]
 send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'الاوامر' and Addictive(msg) then  
@@ -8607,9 +8601,7 @@ end
 return false
 end
 local Text =[[
-𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 [𝙮𝙤𝙪𝙨𝙚𝙛 𝙡𝙖𝙗𝙗𝙖𝙣](t.me/Yousef_Labban)
-𝙮𝙤𝙪 𝙘𝙖𝙣 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙚𝙭𝙞𝙨𝙩𝙞𝙣𝙜 𝙤𝙧𝙙𝙚𝙧𝙨. 
-
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8651,7 +8643,7 @@ Text = [[
 • تعطيل تنظيف الوسائط
 • ضع وقت التنظيف + الوقت 
 • مسح الوسائط
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8698,7 +8690,7 @@ Text = [[
 • الكلايش
 • السيلفي
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8770,7 +8762,7 @@ Text = [[
 • مسح الصلاحيات
 • مسح الرابط
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8819,7 +8811,7 @@ Text = [[
 • تفعيل/تعطيل اوامر التحشيش
 • تفعيل/تعطيل الرابط/جلب الرابط
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8858,7 +8850,7 @@ Text = [[
 • اضف رسائل + العدد بالرد
 • اضف مجوهرات + العدد بالرد
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8908,7 +8900,7 @@ Text = [[
 • رفع/تنزيل منشئ اساسي
 • مسح المنشئين الاساسين
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -9672,8 +9664,8 @@ if text == "تحديث السورس•" then
 send(msg.chat_id_,msg.id_,'• تم التحديث')
 os.execute('rm -rf yousef.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/Yosef-lbban/yousef/master/yousef.lua')
-os.execute('wget https://raw.githubusercontent.com/Yosef-lbban/yousef/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/Yosef-lbban2/yousef/master/yousef.lua')
+os.execute('wget https://raw.githubusercontent.com/Yosef-lbban2/yousef/master/start.lua')
 dofile('yousef.lua')  
 return false
 end
@@ -9916,7 +9908,7 @@ local Teext =[[
 • تعطيل تنظيف الوسائط
 • ضع وقت التنظيف + الوقت 
 • مسح الوسائط
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9969,7 +9961,7 @@ local Teext =[[
 • الكلايش
 • السيلفي
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10047,7 +10039,7 @@ local Teext =[[
 • مسح الصلاحيات
 • مسح الرابط
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10102,7 +10094,7 @@ local Teext =[[
 • تفعيل/تعطيل اوامر التحشيش
 • تفعيل/تعطيل الرابط/جلب الرابط
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10147,7 +10139,7 @@ local Teext =[[
 • اضف رسائل + العدد بالرد
 • اضف مجوهرات + العدد بالرد
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10212,7 +10204,7 @@ local Teext =[[
 • رفع/تنزيل منشئ اساسي
 • مسح المنشئين الاساسين
   ━═━═━═━
-[𝗒𝗈𝗎𝗌𝖾𝖿 𝗅𝖺𝖻𝖻𝖺𝗇](t.me/Yousef_Labban)
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10234,8 +10226,7 @@ end
 elseif Text and Text:match('(.*)/help') then
 if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 [𝙮𝙤𝙪𝙨𝙚𝙛 𝙡𝙖𝙗𝙗𝙖𝙣](t.me/Yousef_Labban)
-𝙮𝙤𝙪 𝙘𝙖𝙣 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙚𝙭𝙞𝙨𝙩𝙞𝙣𝙜 𝙤𝙧𝙙𝙚𝙧𝙨. 
+البوت الاسلامي المجاني
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10659,13 +10650,6 @@ print("\27[34m"..[[
 >> The Bot is Running
 >> Bot source > yousef
 >>Source channel > @Yousef_Labban
->>Source developer > @Yousef_Labban
-╔═╦╗──────╔═╗───╔═╗  ╔╗─────╔╗─╔╗─────────
-╚╗║║╔═╗╔╦╗║═╣╔═╗║═╣  ║║─╔═╗─║╚╗║╚╗╔═╗─╔═╦╗
-╔╩╗║║╬║║║║╠═║║╩╣║╔╝  ║╚╗║╬╚╗║╬║║╬║║╬╚╗║║║║
-╚══╝╚═╝╚═╝╚═╝╚═╝╚╝─  ╚═╝╚══╝╚═╝╚═╝╚══╝╚╩═╝
-───────────────────  ─────────────────────
-
 ]].."\27[m")
 local list = database:smembers(bot_id..'yousef:UsersBot')  
 for k,v in pairs(list) do 
