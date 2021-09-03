@@ -653,7 +653,7 @@ if v.linkgroup then
 if v.linkgroup ~= "" then
 database:set(bot_id.."Private:Group:Link"..idg,v.linkgroup)   
 end;end;end
-send(chat,msg.id_,"• تم رفع الملف بنجاح وتفعيل المجموعات\n• ورفع {الامنشئين الاساسين ; والمنشئين ; والمدراء; والادمنيه} بنجاح")   
+send(chat,msg.id_,"• تم رفع الملف بنجاح وتفعيل المجموعات\n• ورفع {الامنشئين الاساسين ; والمنشئين ; والمدراء; والأدمنية} بنجاح")   
 end
 
 function Is_Not_Spam(msg,type)
@@ -1373,7 +1373,7 @@ end
 if msg.content_.ID == 'MessageAnimation' and not Vips(msg) then      
 local geAni = database:sismember(bot_id.."yousef:List:Filter:Animation"..msg.chat_id_,msg.content_.animation_.animation_.persistent_id_) 
 if geAni then        
-Reply_Status(msg,msg.sender_user_id_,"reply","• المتحركه ممنوعه من المجموعة")  
+Reply_Status(msg,msg.sender_user_id_,"reply","• المتحركة ممنوعه من المجموعة")  
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end
@@ -1389,7 +1389,7 @@ end
 if msg.content_.ID == 'MessagePhoto' and not Vips(msg) then      
 local phh = database:sismember(bot_id.."yousef:List:Filter:Photo"..msg.chat_id_,msg.content_.photo_.sizes_[1].photo_.persistent_id_) 
 if phh then        
-Reply_Status(msg,msg.sender_user_id_,"reply","• الصوره ممنوعه من المجموعة")  
+Reply_Status(msg,msg.sender_user_id_,"reply","• الصورة ممنوعه من المجموعة")  
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end
@@ -1423,9 +1423,9 @@ end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' then
 if ChekAdd(msg.chat_id_) == true then
-if text == "قفل الدردشه" and msg.reply_to_message_id_ == 0 and Owner(msg) then 
+if text == "قفل الدردشة" and msg.reply_to_message_id_ == 0 and Owner(msg) then 
 database:set(bot_id.."yousef:Lock:text"..msg.chat_id_,true) 
-Reply_Status(msg,msg.sender_user_id_,"lock","• تم قفـل الدردشه")  
+Reply_Status(msg,msg.sender_user_id_,"lock","• تم قفـل الدردشة")  
 return false
 end 
 if text == "قفل الاضافه" and msg.reply_to_message_id_ == 0 and Addictive(msg) then 
@@ -1512,7 +1512,7 @@ database:del(bot_id.."yousef:Lock:AddMempar"..msg.chat_id_)
 Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح اضافة الاعضاء")  
 return false
 end 
-if text == "فتح الدردشه" and msg.reply_to_message_id_ == 0 and Owner(msg) then  
+if text == "فتح الدردشة" and msg.reply_to_message_id_ == 0 and Owner(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1523,7 +1523,7 @@ end
 return false
 end 
 database:del(bot_id.."yousef:Lock:text"..msg.chat_id_)  
-Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح الدردشه")  
+Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح الدردشة")  
 return false
 end 
 if text == "فتح الدخول" and msg.reply_to_message_id_ == 0 and Addictive(msg) then  
@@ -1866,7 +1866,7 @@ database:del(bot_id.."yousef:Lock:Video"..msg.chat_id_)
 Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح الفيديو")  
 return false
 end 
-if text == "قفل المتحركه" and Addictive(msg) then  
+if text == "قفل المتحركة" and Addictive(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1877,25 +1877,25 @@ end
 return false
 end
 database:set(bot_id.."yousef:Lock:Animation"..msg.chat_id_,"del")  
-Reply_Status(msg,msg.sender_user_id_,"lock","• تم قفـل المتحركه")  
+Reply_Status(msg,msg.sender_user_id_,"lock","• تم قفـل المتحركة")  
 return false
 end
-if text == "قفل المتحركه بالتقيد" and Addictive(msg) then
+if text == "قفل المتحركة بالتقيد" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Animation"..msg.chat_id_,"ked")  
-Reply_Status(msg,msg.sender_user_id_,"lockkid","• تم قفـل المتحركه")  
+Reply_Status(msg,msg.sender_user_id_,"lockkid","• تم قفـل المتحركة")  
 return false
 end 
-if text == "قفل المتحركه بالكتم" and Addictive(msg) then
+if text == "قفل المتحركة بالكتم" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Animation"..msg.chat_id_,"ktm")  
-Reply_Status(msg,msg.sender_user_id_,"lockktm","• تم قفـل المتحركه")  
+Reply_Status(msg,msg.sender_user_id_,"lockktm","• تم قفـل المتحركة")  
 return false
 end 
-if text == "قفل المتحركه بالطرد" and Addictive(msg) then
+if text == "قفل المتحركة بالطرد" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Animation"..msg.chat_id_,"kick")  
-Reply_Status(msg,msg.sender_user_id_,"lockkick","• تم قفـل المتحركه")  
+Reply_Status(msg,msg.sender_user_id_,"lockkick","• تم قفـل المتحركة")  
 return false
 end 
-if text == "فتح المتحركه" and Addictive(msg) then  
+if text == "فتح المتحركة" and Addictive(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1906,7 +1906,7 @@ end
 return false
 end
 database:del(bot_id.."yousef:Lock:Animation"..msg.chat_id_)  
-Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح المتحركه")  
+Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح المتحركة")  
 return false
 end 
 if text == "قفل الالعاب" and Addictive(msg) then  
@@ -2456,9 +2456,9 @@ if text == ("مسح الثانويين") and VIP_DeV(msg) then
 database:del(bot_id.."DEV:Sudo:T")
 send(msg.chat_id_, msg.id_, "\n• تم مسح قائمة المطورين الثانويين  ")
 end
-if text == ("مسح قائمه العام") and Devyousef(msg) then
+if text == ("مسح قائمة العام") and Devyousef(msg) then
 database:del(bot_id.."yousef:GBan:User")
-send(msg.chat_id_, msg.id_, "\n• تم مسح قائمه العام")
+send(msg.chat_id_, msg.id_, "\n• تم مسح قائمة العام")
 return false
 end
 if text == ("مسح المطورين") and Devyousef(msg) then
@@ -2498,7 +2498,7 @@ database:del(bot_id.."yousef:Manager"..msg.chat_id_)
 texts = "• تم مسح المدراء "
 send(msg.chat_id_, msg.id_, texts)
 end
-if text == "مسح الادمنيه" and Owner(msg) then  
+if text == "مسح الأدمنية" and Owner(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -2588,7 +2588,7 @@ end
 return false
 end
 database:del(bot_id.."yousef:Muted:User"..msg.chat_id_)
-send(msg.chat_id_, msg.id_, "🗑︙ تم مسح قائمه المكتومين ")
+send(msg.chat_id_, msg.id_, "🗑︙ تم مسح قائمة المكتومين ")
 end
 if text == "مسح المحظورين" and Addictive(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
@@ -2603,7 +2603,7 @@ end
 database:del(bot_id.."yousef:Ban:User"..msg.chat_id_)
 send(msg.chat_id_, msg.id_, "\n• تم مسح المحظورين")
 end
-if text == ("قائمه العام") and Devyousef(msg) then
+if text == ("قائمة العام") and Devyousef(msg) then
 local list = database:smembers(bot_id.."yousef:GBan:User")
 t = "\n• قائمة المحظورين عام \n  ━═━═━═━\n"
 for k,v in pairs(list) do
@@ -2703,7 +2703,7 @@ t = "• لا يوجد مدراء"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text == ("الادمنيه") and Owner(msg) then  
+if text == ("الأدمنية") and Owner(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -2714,7 +2714,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."yousef:Mod:User"..msg.chat_id_)
-t = "\n• قائمة الادمنيه \n  ━═━═━═━\n"
+t = "\n• قائمة الأدمنية \n  ━═━═━═━\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."yousef:User:Name" .. v)
 if username then
@@ -4721,10 +4721,10 @@ end
 return false
 end
 database:set(bot_id.."yousef:Change:Chat:Photo"..msg.chat_id_..":"..msg.sender_user_id_,true) 
-send(msg.chat_id_, msg.id_,"• ارسل لي الصوره") 
+send(msg.chat_id_, msg.id_,"• ارسل لي الصورة") 
 return false
 end
-if text == "حذف الصوره" or text == "مسح الصوره" then 
+if text == "حذف الصورة" or text == "مسح الصورة" then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -4836,7 +4836,7 @@ send(msg.chat_id_, msg.id_,"• تم ازالة ترحيب المجموعة")
 end
 return false  
 end
-if text == "قائمه المنع" and Addictive(msg) then  
+if text == "قائمة المنع" and Addictive(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -4848,7 +4848,7 @@ return false
 end
 database:set(bot_id.."yousef:Filter:msg",msg.chat_id_)
 tdcli_function ({ID = "GetUser",user_id_ = bot_id},function(arg,data) 
-local Text ='• قائمه الممنوعات'
+local Text ='• قائمة الممنوعات'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'صور', url="https://t.me/"..data.username_.."?start=ph"..msg.chat_id_},{text = 'كلمات', url="https://t.me/"..data.username_.."?start=msg"..msg.chat_id_}},
@@ -4858,7 +4858,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
-if text == "مسح قائمه المنع" and Addictive(msg) then   
+if text == "مسح قائمة المنع" and Addictive(msg) then   
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -4884,7 +4884,7 @@ local listPhoto = database:smembers(bot_id.."yousef:List:Filter:Photo"..msg.chat
 for k,v in pairs(listPhoto) do  
 database:srem(bot_id.."yousef:List:Filter:Photo"..msg.chat_id_,v)  
 end  
-send(msg.chat_id_, msg.id_,"• تم مسح قائمه المنع")  
+send(msg.chat_id_, msg.id_,"• تم مسح قائمة المنع")  
 end
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and Addictive(msg) then       
 send(msg.chat_id_, msg.id_,"• الان ارسل { كلمه،صوره،ملصق،متحركه } لمنعه من المجموعة")  
@@ -4903,7 +4903,7 @@ end
 if msg.content_.ID == 'MessageAnimation' then    
 local tsssst = database:get(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if tsssst == "rep" then   
-send(msg.chat_id_, msg.id_,"• تم منع المتحركه بنجاح")  
+send(msg.chat_id_, msg.id_,"• تم منع المتحركة بنجاح")  
 database:del(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 database:sadd(bot_id.."yousef:List:Filter:Animation"..msg.chat_id_,msg.content_.animation_.animation_.persistent_id_)  
 return false 
@@ -4921,7 +4921,7 @@ end
 if msg.content_.ID == 'MessagePhoto' then    
 local tsssst = database:get(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if tsssst == "rep" then   
-send(msg.chat_id_, msg.id_,"• تم منع الصوره بنجاح")  
+send(msg.chat_id_, msg.id_,"• تم منع الصورة بنجاح")  
 database:del(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 database:sadd(bot_id.."yousef:List:Filter:Photo"..msg.chat_id_,msg.content_.photo_.sizes_[1].photo_.persistent_id_)  
 return false 
@@ -4953,7 +4953,7 @@ end
 if msg.content_.ID == 'MessageAnimation' then    
 local onte = database:get(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if onte and onte == "reppp" then   
-send(msg.chat_id_, msg.id_,"• تم الغاء منع المتحركه بنجاح ")  
+send(msg.chat_id_, msg.id_,"• تم الغاء منع المتحركة بنجاح ")  
 database:del(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 database:srem(bot_id.."yousef:List:Filter:Animation"..msg.chat_id_,msg.content_.animation_.animation_.persistent_id_)  
 return false
@@ -4971,7 +4971,7 @@ end
 if msg.content_.ID == 'MessagePhoto' then    
 local hoto = database:get(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if hoto and hoto == "reppp" then   
-send(msg.chat_id_, msg.id_,"• تم الغاء منع الصوره بنجاح ")  
+send(msg.chat_id_, msg.id_,"• تم الغاء منع الصورة بنجاح ")  
 database:del(bot_id.."yousef:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 database:srem(bot_id.."yousef:List:Filter:Photo"..msg.content_.photo_.sizes_[1].photo_.persistent_id_)  
 return false
@@ -5118,7 +5118,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."yousef:List:Cmd:Group:New"..msg.chat_id_.."")
-t = "• قائمه الاوامر المضافه  \n  ━═━═━═━\n"
+t = "• قائمة الاوامر المضافه  \n  ━═━═━═━\n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 if Cmds then 
@@ -5164,11 +5164,11 @@ database:set(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":من","رفع 
 database:sadd(bot_id.."yousef:List:Cmd:Group:New"..msg.chat_id_,"من")
 database:set(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":اس","رفع منشئ اساسي")
 database:sadd(bot_id.."yousef:List:Cmd:Group:New"..msg.chat_id_,"اس")
-database:set(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":تعط","تعطيل الايدي بالصوره")
+database:set(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":تعط","تعطيل الايدي بالصورة")
 database:sadd(bot_id.."yousef:List:Cmd:Group:New"..msg.chat_id_,"تعط")
-database:set(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":تفع","تفعيل الايدي بالصوره")
+database:set(bot_id.."yousef:Set:Cmd:Group:New1"..msg.chat_id_..":تفع","تفعيل الايدي بالصورة")
 database:sadd(bot_id.."yousef:List:Cmd:Group:New"..msg.chat_id_,"تفع")
-send(msg.chat_id_, msg.id_,"• تم ترتيب الاوامر بالشكل التالي ~\n- ايدي - ا .\n- مميز - م .\n- ادمن - اد .\n- مدير - مد . \n- منشى - من . \n- المنشئ الاساسي - اس  . \n- تعطيل الايدي بالصوره - تعط .\n- تفعيل الايدي بالصوره - تفع .")  
+send(msg.chat_id_, msg.id_,"• تم ترتيب الاوامر بالشكل التالي ~\n- ايدي - ا .\n- مميز - م .\n- ادمن - اد .\n- مدير - مد . \n- منشى - من . \n- المنشئ الاساسي - اس  . \n- تعطيل الايدي بالصورة - تعط .\n- تفعيل الايدي بالصورة - تفع .")  
 end
 if text == "اضف امر" and Constructor(msg) then
 if AddChannel(msg.sender_user_id_) == false then
@@ -5510,7 +5510,7 @@ send(msg.chat_id_, msg.id_,"• تم مسح ردود المدير")
 end
 if text == ("ردود المدير") and Owner(msg) then
 local list = database:smembers(bot_id.."yousef:List:Manager"..msg.chat_id_.."")
-text = "• قائمه ردود المدير \n  ━═━═━═━\n"
+text = "• قائمة ردود المدير \n  ━═━═━═━\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."yousef:Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = "متحركه 🎭"
@@ -5635,7 +5635,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."yousef:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_.."") == "true2" then
-send(msg.chat_id_, msg.id_,"• تم ازالة الرد من قائمه الردود")
+send(msg.chat_id_, msg.id_,"• تم ازالة الرد من قائمة الردود")
 database:del(bot_id.."yousef:Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 database:del(bot_id.."yousef:Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."yousef:Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
@@ -5818,7 +5818,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."yousef:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_,"• تم ازالة الرد من قائمه ردود المطور")
+send(msg.chat_id_, msg.id_,"• تم ازالة الرد من قائمة ردود المطور")
 list = {"Add:Rd:Sudo:Audio","Add:Rd:Sudo:File","Add:Rd:Sudo:Video","Add:Rd:Sudo:Photo","Add:Rd:Sudo:Text","Add:Rd:Sudo:stekr","Add:Rd:Sudo:vico","Add:Rd:Sudo:Gif"}
 for k,v in pairs(list) do
 database:del(bot_id..'yousef:'..v..text)
@@ -6127,7 +6127,7 @@ return false
 end 
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
-local taha = "• عدد الادمنيه : "..data.administrator_count_..
+local taha = "• عدد الأدمنية : "..data.administrator_count_..
 "\n\n• عدد المطرودين : "..data.kicked_count_..
 "\n\n• عدد الاعضاء : "..data.member_count_..
 "\n\n• عدد رسائل القروب : "..(msg.id_/2097152/0.5)..
@@ -6379,7 +6379,7 @@ end
 end,nil) 
 end
 
-if text ==("رفع الادمنيه") and Owner(msg) then
+if text ==("رفع الأدمنية") and Owner(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -7013,9 +7013,9 @@ local text =
 "\n".."• الكلايش ↺ "..lock_spam..
 "\n".."• الكيبورد ↺ "..lock_inlin..
 "\n".."• الاغاني ↺ "..lock_vico..
-"\n".."• المتحركه ↺ "..lock_gif..
+"\n".."• المتحركة ↺ "..lock_gif..
 "\n".."• الملفات ↺ "..lock_file..
-"\n".."• الدردشه ↺ "..lock_text..
+"\n".."• الدردشة ↺ "..lock_text..
 "\n".."• الفيديو ↺ "..lock_ved..
 "\n".."• الصور ↺ "..lock_photo..
 "\n  ━═━═━═━"..
@@ -7085,7 +7085,7 @@ end
 database:set(bot_id..'yousef:Lock:ID:Bot'..msg.chat_id_,true) 
 send(msg.chat_id_, msg.id_,'• تم تعطيل الايدي') 
 end
-if text == 'تفعيل الايدي بالصوره' and Owner(msg) then   
+if text == 'تفعيل الايدي بالصورة' and Owner(msg) then   
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -7096,9 +7096,9 @@ end
 return false
 end
 database:del(bot_id..'yousef:Lock:ID:Bot:Photo'..msg.chat_id_) 
-send(msg.chat_id_, msg.id_,'• تم تفعيل الايدي بالصوره') 
+send(msg.chat_id_, msg.id_,'• تم تفعيل الايدي بالصورة') 
 end
-if text == 'تعطيل الايدي بالصوره' and Owner(msg) then  
+if text == 'تعطيل الايدي بالصورة' and Owner(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -7109,7 +7109,7 @@ end
 return false
 end
 database:set(bot_id..'yousef:Lock:ID:Bot:Photo'..msg.chat_id_,true) 
-send(msg.chat_id_, msg.id_,'• تم تعطيل الايدي بالصوره') 
+send(msg.chat_id_, msg.id_,'• تم تعطيل الايدي بالصورة') 
 end
 if text == 'تعين الايدي' and Owner(msg) then
 if AddChannel(msg.sender_user_id_) == false then
@@ -7134,7 +7134,7 @@ local Text= [[
 - `#edit` > عدد السحكات
 - `#game` > المجوهرات
 - `#AddMem` > عدد الجهات
-- `#Description` > تعليق الصوره
+- `#Description` > تعليق الصورة
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false  
@@ -7873,7 +7873,7 @@ end
 return false
 end
 Teext = [[
-• قائمه الالعاب الموجوده
+• قائمة الالعاب الموجوده
   ━═━═━═━
 • لعبة البات ↺ بات
 • لعبة التخمين ↺ خمن
@@ -8214,7 +8214,7 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."yousef:zhr
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://rudi-dev.tk/Amir1/Boyka.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n• قائمه الزخرفه \n  ━═━═━═━\n"
+t = "\n• قائمة الزخرفه \n  ━═━═━═━\n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
@@ -8670,14 +8670,14 @@ Text = [[
 • الشارحة
 • التعديل
 • التثبيت
-• المتحركه
+• المتحركة
 • الملفات
 • الصور
 
 • الملصقات
 • الفيديو
 • الانلاين
-• الدردشه
+• الدردشة
 • التوجيه
 • الاغاني
 • الصوت
@@ -8724,7 +8724,7 @@ Text = [[
 • المحظورين
 • المميزين
 • الصلاحيات
-• قائمه المنع
+• قائمة المنع
   ━═━═━═━
 • الغاء كتم
 • الغاء حظر
@@ -8750,14 +8750,14 @@ Text = [[
 • وضع قوانين
 • وضع ترحيب
   ━═━═━═━
-• مسح قائمه المنع
+• مسح قائمة المنع
 • مسح المحظورين
 • مسح المميزين
 • مسح المكتومين
 • مسح المطرودين
 • مسح القوانين
 • مسح البوتات
-• مسح الصوره
+• مسح الصورة
 • مسح الصلاحيات
 • مسح الرابط
   ━═━═━═━
@@ -8784,9 +8784,9 @@ Text = [[
 • تنزيل الكل
 • رفع ادمن
 • تنزيل ادمن
-• رفع الادمنيه
-• مسح الادمنيه
-• الادمنيه
+• رفع الأدمنية
+• مسح الأدمنية
+• الأدمنية
 • تعين الايدي
 • مسح الايدي
 • ردود المدير
@@ -8806,7 +8806,7 @@ Text = [[
 • تفعيل/تعطيل ردود المطور
 • تفعيل/تعطيل الحظر/الطرد
 • تفعيل/تعطيل اللعبه/الالعاب
-• تفعيل/تعطيل الايدي بالصوره
+• تفعيل/تعطيل الايدي بالصورة
 • تفعيل/تعطيل اوامر التحشيش
 • تفعيل/تعطيل الرابط/جلب الرابط
   ━═━═━═━
@@ -8869,7 +8869,7 @@ Text = [[
 • اضف رد للكل 
 • حذف رد للكل 
 • مسح المطورين
-• مسح قائمه العام
+• مسح قائمة العام
 • تعطيل الاذاعه 
 • تفعيل الاذاعه 
 • تعطيل الاذاعه
@@ -9101,7 +9101,7 @@ local keyboard = {
 {'اذاعه بالتوجيه•','اذاعه بالتوجيه خاص•'},
 {'تفعيل الاذاعه•','تعطيل الاذاعه•'},
 {'تفعيل المغادره•','تعطيل المغادره•'},
-{'مسح قائمه العام•','مسح المطورين•'},
+{'مسح قائمة العام•','مسح المطورين•'},
 {'حذف كليشه ستارت•','ضع كليشه ستارت•'},
 {'- تعطيل الاشتراك الاجباري• .'},
 {'- تغير الاشتراك• .','حذف رساله الاشتراك• .'},
@@ -9109,7 +9109,7 @@ local keyboard = {
 {'- الاشتراك الاجباري• .'},
 {'- تعين قناة الاشتراك• .','- تغير رساله الاشتراك• .'},
 {'تحديث السورس•','تحديث الملفات•'},
-{'تغير اسم البوت•','قائمه العام•'},
+{'تغير اسم البوت•','قائمة العام•'},
 {'اضف كت تويت','حذف كت تويت'},
 {'جلب نسخه احتياطيه•'},
 {'الغاء•'}
@@ -9247,10 +9247,10 @@ sendSticker(id_user, msg.id_, msg.content_.sticker_.sticker_.persistent_id_)
 Text = '• تمت ارسال الملصق اليه .. '
 elseif msg.content_.ID == 'MessagePhoto' then    
 sendPhoto(id_user, msg.id_,msg.content_.photo_.sizes_[0].photo_.persistent_id_,(msg.content_.caption_ or ''))    
-Text = '• تمت ارسال الصوره اليه .. '
+Text = '• تمت ارسال الصورة اليه .. '
 elseif msg.content_.ID == 'MessageAnimation' then    
 sendDocument(id_user, msg.id_, msg.content_.animation_.animation_.persistent_id_)    
-Text = '• تمت ارسال المتحركه اليه .. '
+Text = '• تمت ارسال المتحركة اليه .. '
 elseif msg.content_.ID == 'MessageVoice' then    
 sendVoice(id_user, msg.id_, msg.content_.voice_.voice_.persistent_id_)    
 Text = '• تمت ارسال البصمه اليه .. '
@@ -9550,16 +9550,16 @@ local texxt = string.match(text, "(.*)")
 database:set(bot_id..'text:ch:user',texxt)
 send(msg.chat_id_, msg.id_,'• تم تغيير رسالة الاشتراك ')
 end
-if text == ("مسح قائمه العام•") and Devyousef(msg) then
+if text == ("مسح قائمة العام•") and Devyousef(msg) then
 database:del(bot_id.."yousef:GBan:User")
-send(msg.chat_id_, msg.id_, "\n• تم مسح قائمه العام")
+send(msg.chat_id_, msg.id_, "\n• تم مسح قائمة العام")
 return false
 end
 if text == ("مسح المطورين•") and Devyousef(msg) then
 database:del(bot_id.."yousef:Sudo:User")
 send(msg.chat_id_, msg.id_, "\n• تم مسح قائمة المطورين  ")
 end
-if text == ("قائمه العام•") and Devyousef(msg) then
+if text == ("قائمة العام•") and Devyousef(msg) then
 local list = database:smembers(bot_id.."yousef:GBan:User")
 t = "\n• قائمة المحظورين عام \n  ━═━═━═━\n"
 for k,v in pairs(list) do
@@ -9940,14 +9940,14 @@ local Teext =[[
 • الشارحة
 • التعديل
 • التثبيت
-• المتحركه
+• المتحركة
 • الملفات
 • الصور
 
 • الملصقات
 • الفيديو
 • الانلاين
-• الدردشه
+• الدردشة
 • التوجيه
 • الاغاني
 • الصوت
@@ -10001,7 +10001,7 @@ local Teext =[[
 • المحظورين
 • المميزين
 • الصلاحيات
-• قائمه المنع
+• قائمة المنع
   ━═━═━═━
 • الغاء كتم
 • الغاء حظر
@@ -10027,14 +10027,14 @@ local Teext =[[
 • وضع قوانين
 • وضع ترحيب
   ━═━═━═━
-• مسح قائمه المنع
+• مسح قائمة المنع
 • مسح المحظورين
 • مسح المميزين
 • مسح المكتومين
 • مسح المطرودين
 • مسح القوانين
 • مسح البوتات
-• مسح الصوره
+• مسح الصورة
 • مسح الصلاحيات
 • مسح الرابط
   ━═━═━═━
@@ -10067,9 +10067,9 @@ local Teext =[[
 • تنزيل الكل
 • رفع ادمن
 • تنزيل ادمن
-• رفع الادمنيه
-• مسح الادمنيه
-• الادمنيه
+• رفع الأدمنية
+• مسح الأدمنية
+• الأدمنية
 • تعين الايدي
 • مسح الايدي
 • ردود المدير
@@ -10089,7 +10089,7 @@ local Teext =[[
 • تفعيل/تعطيل ردود المطور
 • تفعيل/تعطيل الحظر/الطرد
 • تفعيل/تعطيل اللعبه/الالعاب
-• تفعيل/تعطيل الايدي بالصوره
+• تفعيل/تعطيل الايدي بالصورة
 • تفعيل/تعطيل اوامر التحشيش
 • تفعيل/تعطيل الرابط/جلب الرابط
   ━═━═━═━
@@ -10173,7 +10173,7 @@ local Teext =[[
 • اضف رد للكل 
 • حذف رد للكل 
 • مسح المطورين
-• مسح قائمه العام
+• مسح قائمة العام
 • تعطيل الاذاعه 
 • تفعيل الاذاعه 
 • تعطيل الاذاعه
@@ -10573,7 +10573,7 @@ end
 if msg.content_.ID == 'MessageAnimation' then    
 local Animation_Msg = database:sismember(bot_id.."yousef:List:Filter:Animation"..result.chat_id_,result.content_.animation_.animation_.persistent_id_) 
 if Animation_Msg then    
-Reply_Status(result,result.sender_user_id_,"reply","• المتحركه ممنوعه من المجموعة")  
+Reply_Status(result,result.sender_user_id_,"reply","• المتحركة ممنوعه من المجموعة")  
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
@@ -10581,7 +10581,7 @@ end
 if msg.content_.ID == 'MessagePhoto' then    
 local Photo_Msg = database:sismember(bot_id.."yousef:List:Filter:Photo"..result.chat_id_,result.content_.photo_.sizes_[1].photo_.persistent_id_) 
 if Photo_Msg then    
-Reply_Status(result,result.sender_user_id_,"reply","• الصوره ممنوعه من المجموعة")  
+Reply_Status(result,result.sender_user_id_,"reply","• الصورة ممنوعه من المجموعة")  
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
