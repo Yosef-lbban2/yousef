@@ -1781,29 +1781,29 @@ database:del(bot_id.."yousef:Lock:hashtak"..msg.chat_id_)
 Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح التاك")  
 return false
 end 
-if text == "قفل الشارحه" and Addictive(msg) then
+if text == "قفل الشارحة" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Cmd"..msg.chat_id_,"del")  
-Reply_Status(msg,msg.sender_user_id_,"lock","• تم قفـل الشارحه")  
+Reply_Status(msg,msg.sender_user_id_,"lock","• تم قفـل الشارحة")  
 return false
 end 
-if text == "قفل الشارحه بالتقيد" and Addictive(msg) then
+if text == "قفل الشارحة بالتقيد" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Cmd"..msg.chat_id_,"ked")  
-Reply_Status(msg,msg.sender_user_id_,"lockkid","• تم قفـل الشارحه")  
+Reply_Status(msg,msg.sender_user_id_,"lockkid","• تم قفـل الشارحة")  
 return false
 end 
-if text == "قفل الشارحه بالكتم" and Addictive(msg) then
+if text == "قفل الشارحة بالكتم" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Cmd"..msg.chat_id_,"ktm")  
-Reply_Status(msg,msg.sender_user_id_,"lockktm","• تم قفـل الشارحه")  
+Reply_Status(msg,msg.sender_user_id_,"lockktm","• تم قفـل الشارحة")  
 return false
 end 
-if text == "قفل الشارحه بالطرد" and Addictive(msg) then
+if text == "قفل الشارحة بالطرد" and Addictive(msg) then
 database:set(bot_id.."yousef:Lock:Cmd"..msg.chat_id_,"kick")  
-Reply_Status(msg,msg.sender_user_id_,"lockkick","• تم قفـل الشارحه")  
+Reply_Status(msg,msg.sender_user_id_,"lockkick","• تم قفـل الشارحة")  
 return false
 end 
-if text == "فتح الشارحه" and Addictive(msg) then
+if text == "فتح الشارحة" and Addictive(msg) then
 database:del(bot_id.."yousef:Lock:Cmd"..msg.chat_id_)  
-Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح الشارحه")  
+Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فتح الشارحة")  
 return false
 end 
 if text == "قفل الصور"and Addictive(msg) then
@@ -8667,7 +8667,7 @@ Text = [[
 • الروابط
 • المعرف
 • التاك
-• الشارحه
+• الشارحة
 • التعديل
 • التثبيت
 • المتحركه
@@ -9937,7 +9937,7 @@ local Teext =[[
 • الروابط
 • المعرف
 • التاك
-• الشارحه
+• الشارحة
 • التعديل
 • التثبيت
 • المتحركه
