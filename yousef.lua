@@ -738,7 +738,7 @@ sendSticker(v, 0, msg.content_.sticker_.sticker_.persistent_id_)
 database:set(bot_id..'yousef:Msg:Pin:Chat'..v,msg.content_.sticker_.sticker_.persistent_id_) 
 end 
 end
-send(msg.chat_id_, msg.id_,"• تمت الاذاعه الى *~ "..#list.." ~* مجموعه ")     
+send(msg.chat_id_, msg.id_,"• تمت الاذاعه الى *~ "..#list.." ~* مجموعة ")     
 database:del(bot_id.."yousef:yousef:Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end
@@ -1313,7 +1313,7 @@ for k,v in pairs(list) do
 sendSticker(v, 0, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_,"• تمت الاذاعه الى *~ "..#list.." ~* مجموعه ")     
+send(msg.chat_id_, msg.id_,"• تمت الاذاعه الى *~ "..#list.." ~* مجموعة ")     
 database:del(bot_id.."yousef:yousef:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end
@@ -1334,7 +1334,7 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_,"• تمت الاذاعه الى *~ "..#list.." ~* مجموعه ")     
+send(msg.chat_id_, msg.id_,"• تمت الاذاعه الى *~ "..#list.." ~* مجموعة ")     
 database:del(bot_id.."yousef:yousef:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 return false
@@ -3292,7 +3292,7 @@ return false
 end
 function Function_yousef(extra, result, success)
 database:sadd(bot_id.."yousef:Mod:User"..msg.chat_id_, result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","• تم ترقيته ادمن للمجموعه")  
+Reply_Status(msg,result.sender_user_id_,"reply","• تم ترقيته ادمن للمجموعة")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_yousef, nil)
 return false
@@ -3319,7 +3319,7 @@ send(msg.chat_id_,msg.id_,"• عذرا عزيزي المستخدم هاذا م�
 return false 
 end      
 database:sadd(bot_id.."yousef:Mod:User"..msg.chat_id_, result.id_)
-Reply_Status(msg,result.id_,"reply","• تم ترقيته ادمن للمجموعه")  
+Reply_Status(msg,result.id_,"reply","• تم ترقيته ادمن للمجموعة")  
 else
 send(msg.chat_id_, msg.id_,"• لا يوجد حساب بهاذا المعرف")
 end
@@ -3343,7 +3343,7 @@ send(msg.chat_id_, msg.id_,'• لا تستطيع رفع احد وذالك لا�
 return false
 end
 database:sadd(bot_id.."yousef:Mod:User"..msg.chat_id_, userid)
-Reply_Status(msg,userid,"reply","• تم ترقيته ادمن للمجموعه")  
+Reply_Status(msg,userid,"reply","• تم ترقيته ادمن للمجموعة")  
 return false
 end
 if text == ("تنزيل ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then  
@@ -3417,7 +3417,7 @@ return false
 end
 function Function_yousef(extra, result, success)
 database:sadd(bot_id.."yousef:Special:User"..msg.chat_id_, result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","• تم ترقيته مميز للمجموعه")  
+Reply_Status(msg,result.sender_user_id_,"reply","• تم ترقيته مميز للمجموعة")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_yousef, nil)
 return false
@@ -3444,7 +3444,7 @@ send(msg.chat_id_,msg.id_,"• عذرا عزيزي المستخدم هاذا م�
 return false 
 end      
 database:sadd(bot_id.."yousef:Special:User"..msg.chat_id_, result.id_)
-Reply_Status(msg,result.id_,"reply","• تم ترقيته مميز للمجموعه")  
+Reply_Status(msg,result.id_,"reply","• تم ترقيته مميز للمجموعة")  
 else
 send(msg.chat_id_, msg.id_,"• لا يوجد حساب بهاذا المعرف")
 end
@@ -3469,7 +3469,7 @@ send(msg.chat_id_, msg.id_,'• لا تستطيع رفع احد وذالك لا�
 return false
 end
 database:sadd(bot_id.."yousef:Special:User"..msg.chat_id_, userid)
-Reply_Status(msg,userid,"reply","• تم ترقيته مميز للمجموعه")  
+Reply_Status(msg,userid,"reply","• تم ترقيته مميز للمجموعة")  
 return false
 end
 
@@ -4787,7 +4787,7 @@ end
 if database:get(bot_id.."yousef:Get:Welcome:Group"..msg.chat_id_)   then 
 Welcome = database:get(bot_id.."yousef:Get:Welcome:Group"..msg.chat_id_)  
 else 
-Welcome = "• لم يتم تعيين ترحيب للمجموعه"
+Welcome = "• لم يتم تعيين ترحيب للمجموعة"
 end 
 send(msg.chat_id_, msg.id_,"["..Welcome.."]") 
 return false  
@@ -5216,7 +5216,7 @@ return false
 end
 function Function_yousef(extra, result, success)
 database:sadd(bot_id.."yousef:MN:TF"..msg.chat_id_, result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","• تم ترقيته منظف للمجموعه")  
+Reply_Status(msg,result.sender_user_id_,"reply","• تم ترقيته منظف للمجموعة")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_yousef, nil)
 return false
@@ -5239,7 +5239,7 @@ send(msg.chat_id_,msg.id_,"• عذرا عزيزي المستخدم هاذا م�
 return false 
 end      
 database:sadd(bot_id.."yousef:MN:TF"..msg.chat_id_, result.id_)
-Reply_Status(msg,result.id_,"reply","• تم ترقيته منظف للمجموعه")  
+Reply_Status(msg,result.id_,"reply","• تم ترقيته منظف للمجموعة")  
 else
 send(msg.chat_id_, msg.id_,"• لا يوجد حساب بهاذا المعرف")
 end
@@ -5263,7 +5263,7 @@ send(msg.chat_id_, msg.id_,'• لا تستطيع رفع احد وذالك لا�
 return false
 end
 database:sadd(bot_id.."yousef:MN:TF"..msg.chat_id_, userid)
-Reply_Status(msg,userid,"reply","• تم ترقيته منظف للمجموعه")  
+Reply_Status(msg,userid,"reply","• تم ترقيته منظف للمجموعة")  
 return false
 end
 if text == ("تنزيل منظف") and tonumber(msg.reply_to_message_id_) ~= 0 and BasicConstructor(msg) then  
@@ -8126,9 +8126,9 @@ end
 if w == 0 then
 storm = ''
 else
-storm = '\n• تم ازالة ~'..w..' مجموعه لان البوت عضو'
+storm = '\n• تم ازالة ~'..w..' مجموعة لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,'*• عدد المجموعات الان ~ '..#group..' مجموعه '..storm..''..taha..'\n• اصبح عدد المجموعات الان ~ '..sendok..' مجموعات*\n')   
+send(msg.chat_id_, msg.id_,'*• عدد المجموعات الان ~ '..#group..' مجموعة '..storm..''..taha..'\n• اصبح عدد المجموعات الان ~ '..sendok..' مجموعات*\n')   
 end
 end
 end,nil)
@@ -8956,7 +8956,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = '• تم تفعيل مجموعه جديده\n'..
+Text = '• تم تفعيل مجموعة جديده\n'..
 '\n• بواسطة ~ '..Name..''..
 '\n• ايدي المجموعة ~ `'..IdChat..'`'..
 '\n• عدد اعضاء المجموعة *~ '..NumMember..'*'..
@@ -9003,7 +9003,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = '• تم تعطيل مجموعه جديده\n'..
+Text = '• تم تعطيل مجموعة جديده\n'..
 '\n• بواسطة ~ '..Name..''..
 '\n• ايدي المجموعة ~ `'..IdChat..'`'..
 '\n• اسم المجموعة ~ ['..NameChat..']'..
@@ -9069,7 +9069,7 @@ LinkGp = linkgpp.result
 else
 LinkGp = 'لا يوجد'
 end
-Text = '• تم تفعيل مجموعه جديده\n'..
+Text = '• تم تفعيل مجموعة جديده\n'..
 '\n• بواسطة ~ '..Name..''..
 '\n• موقعه في المجموعة ~ '..AddPy..'' ..
 '\n• ايدي المجموعة ~ `'..IdChat..'`'..
@@ -9337,9 +9337,9 @@ end
 if w == 0 then
 storm = ''
 else
-storm = '\n• تم ازالة ~'..w..' مجموعه لان البوت عضو'
+storm = '\n• تم ازالة ~'..w..' مجموعة لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,'*• عدد المجموعات الان ~ '..#group..' مجموعه '..storm..''..taha..'\n• اصبح عدد المجموعات الان ~ '..sendok..' مجموعات*\n')   
+send(msg.chat_id_, msg.id_,'*• عدد المجموعات الان ~ '..#group..' مجموعة '..storm..''..taha..'\n• اصبح عدد المجموعات الان ~ '..sendok..' مجموعات*\n')   
 end
 end
 end,nil)
@@ -9526,7 +9526,7 @@ if data and data.type_ and data.type_.ID and data.type_.ID == 'PrivateChatInfo' 
 send(msg.chat_id_, msg.id_, '• عذا لا يمكنك وضع معرف حسابات في الاشتراك ')
 return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == true then
-send(msg.chat_id_, msg.id_,'• عذا لا يمكنك وضع معرف مجموعه بالاشتراك ')
+send(msg.chat_id_, msg.id_,'• عذا لا يمكنك وضع معرف مجموعة بالاشتراك ')
 return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == false then
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.ID and data.type_.channel_.status_.ID == 'ChatMemberStatusEditor' then
