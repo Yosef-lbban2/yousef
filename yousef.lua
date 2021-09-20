@@ -2724,7 +2724,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = "• لا يوجد ادمنيه"
+t = "• لا يوجد ادمنية"
 end
 send(msg.chat_id_, msg.id_, t)
 end
@@ -3358,7 +3358,7 @@ return false
 end
 function Function_yousef(extra, result, success)
 database:srem(bot_id.."yousef:Mod:User"..msg.chat_id_, result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","• تم تنزيله من ادمنيه المجموعة")  
+Reply_Status(msg,result.sender_user_id_,"reply","• تم تنزيله من ادمنية المجموعة")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_yousef, nil)
 return false
@@ -3377,7 +3377,7 @@ local username = text:match("^تنزيل ادمن @(.*)$")
 function Function_yousef(extra, result, success)
 if result.id_ then
 database:srem(bot_id.."yousef:Mod:User"..msg.chat_id_, result.id_)
-Reply_Status(msg,result.id_,"reply","• تم تنزيله من ادمنيه المجموعة")  
+Reply_Status(msg,result.id_,"reply","• تم تنزيله من ادمنية المجموعة")  
 else
 send(msg.chat_id_, msg.id_,"• لا يوجد حساب بهاذا المعرف")
 end
@@ -3397,7 +3397,7 @@ return false
 end
 local userid = text:match("^تنزيل ادمن (%d+)$")
 database:srem(bot_id.."yousef:Mod:User"..msg.chat_id_, userid)
-Reply_Status(msg,userid,"reply","• تم تنزيله من ادمنيه المجموعة")  
+Reply_Status(msg,userid,"reply","• تم تنزيله من ادمنية المجموعة")  
 return false
 end
 
@@ -6493,12 +6493,12 @@ end
 Namebot = (database:get(bot_id.."yousef:Name:Bot") or "يوسف لبان")
 local namebot = {
 "خليك ثكيل حبي لضل كل شوي صايحلي ؟",
-" شتريد من "..Namebot,
+" ويش تبي من "..Namebot,
 " دوختو "..Namebot,
 'لتلح عاد نطيتك عين؟',
 'وبعدين وياك؟ ',
 'هلا عمري قول؟ ',
-" شتريد من "..Namebot,
+" ويش تبي من "..Namebot,
 'دد لتلح؟',
 'ها بربوك',
 " ها يروح "..Namebot,
